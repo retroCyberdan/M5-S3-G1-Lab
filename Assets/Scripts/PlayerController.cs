@@ -11,12 +11,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody _rb;
     private Vector3 _movement;
-    private PlayerInventory _inventory;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _inventory = GetComponent<PlayerInventory>();
     }
 
     void Update()
@@ -24,14 +22,6 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v =Input.GetAxis("Vertical");
         _movement = new Vector3(h, 0f, v).normalized;
-
-        for (int i = 1; i <= 9; i++) // <- uso item premendo il rispettivo tasto da tastiera
-        {
-            if (Input.GetKeyDown(i.ToString())) // <- converte il valore di i in stringa testuale
-            {
-                _inventory.UseItemById(i.ToString());
-            }
-        }
     }
 
     void FixedUpdate()
