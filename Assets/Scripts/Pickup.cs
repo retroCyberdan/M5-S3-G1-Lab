@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public ItemSO item;
+    [SerializeField] private ItemSO _item;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collider)
     {
-        PlayerInventory inventory = other.GetComponent<PlayerInventory>();
-        if (inventory != null)
-        {
-            inventory.AddItem(item);
-            Destroy(gameObject);
-        }
+        if (collider.CompareTag("Player"))
+            {
+            PlayerInventory inventory = collider.GetComponent<PlayerInventory>();
+            if (inventory != null)
+            {
+                inventory.AddItem(_item);
+                Destroy(gameObject);
+            }
+        }        
     }
 }

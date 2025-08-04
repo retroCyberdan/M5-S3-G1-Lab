@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 6969864395341912776}
   - component: {fileID: 2584356510027224588}
   - component: {fileID: 8180408037458403064}
+  - component: {fileID: 7640510572763838374}
   m_Layer: 3
   m_Name: Player_WASD_MOUSE
   m_TagString: Untagged
@@ -241,7 +242,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &2584356510027224588
 MonoBehaviour:
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b6c10a1c58b764db1a331c514121ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isWASD: 0
+  _speed: 5
 --- !u!114 &8180408037458403064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,3 +269,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3085b5e6e7383844897529b0d3de865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+--- !u!114 &7640510572763838374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187431923072526681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f98e4ad3d45ab1498aedebe0dd0e9de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHP: 100
+  _currentHP: 0
+  _healthText: {fileID: 0}

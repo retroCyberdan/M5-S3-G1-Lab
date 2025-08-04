@@ -10,10 +10,10 @@ public class HealthPotionSO : ItemSO
 
     public override void Use(GameObject target)
     {
-        PlayerController player = target.GetComponent<PlayerController>();
-        if (player != null)
+        LifeController life = target.GetComponent<LifeController>();
+        if (life != null)
         {
-            player.RestoreHealth(_healingFactor);
+            life.RestoreHealth(_healingFactor);
             Debug.Log($"Usato {itemName}: +{_healingFactor} HP");
         }
     }

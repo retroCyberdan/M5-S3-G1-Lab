@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 887b5bff52871204a9e98fe7072a383c, type: 3}
-  m_Name: HealthPotion
+  m_Script: {fileID: 11500000, guid: 966588cb3da56434aab11c75bfefe73b, type: 3}
+  m_Name: PoisonPotion
   m_EditorClassIdentifier: 
-  itemId: 1
-  itemName: Health Potion
-  itemDescription: Potion that restore 10HP
-  itemSprite: {fileID: 21300000, guid: 280bddcb195a2bb4f931f5dfe3975254, type: 3}
-  _healingFactor: 10
+  itemId: 2
+  itemName: Poison Potion
+  itemDescription: Pills that gaves a damage of 5HP
+  itemSprite: {fileID: 21300000, guid: e9bb4d9855f77a14fb90c936f78812cc, type: 3}
+  _damageFactor: 5
